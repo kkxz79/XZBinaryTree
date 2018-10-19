@@ -13,6 +13,7 @@
 		9B1AE843217703FF00355046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B1AE842217703FF00355046 /* Assets.xcassets */; };
 		9B1AE846217703FF00355046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1AE844217703FF00355046 /* LaunchScreen.storyboard */; };
 		9B1AE849217703FF00355046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE848217703FF00355046 /* main.m */; };
+		9B1AE8512177071700355046 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE8502177071700355046 /* BinaryTreeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9B1AE845217703FF00355046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B1AE847217703FF00355046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B1AE848217703FF00355046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B1AE84F2177071700355046 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		9B1AE8502177071700355046 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				9B1AE83A217703FD00355046 /* AppDelegate.m */,
 				9B1AE83C217703FD00355046 /* ViewController.h */,
 				9B1AE83D217703FD00355046 /* ViewController.m */,
+				9B1AE84F2177071700355046 /* BinaryTreeNode.h */,
+				9B1AE8502177071700355046 /* BinaryTreeNode.m */,
 				9B1AE83F217703FD00355046 /* Main.storyboard */,
 				9B1AE842217703FF00355046 /* Assets.xcassets */,
 				9B1AE844217703FF00355046 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				9B1AE83E217703FD00355046 /* ViewController.m in Sources */,
 				9B1AE849217703FF00355046 /* main.m in Sources */,
+				9B1AE8512177071700355046 /* BinaryTreeNode.m in Sources */,
 				9B1AE83B217703FD00355046 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
