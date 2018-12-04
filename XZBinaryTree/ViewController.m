@@ -20,7 +20,7 @@
     [super viewDidLoad];
     //二叉树调用
     //二叉排序树生成
-    NSArray * arr = @[@7,@6,@3,@2,@1,@9,@10,@12,@14,@4,@14];
+    NSArray * arr = @[@7,@6,@3,@2,@1,@9,@10,@12,@14,@4,@16];
     BinaryTreeNode * tree = [BinaryTreeNode new];
     tree = [BinaryTreeNode createTreeWithValues:arr];
     NSLog(@"二叉排序树：%@",tree);
@@ -34,21 +34,21 @@
     [BinaryTreeNode preOrderTraverseTree:tree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [orderArray addObject:@(treeNode.value)];
     }];
-    NSLog(@"先序遍历结果：%@",[orderArray componentsJoinedByString:@","]);//7,6,3,2,1,4,9,10,12,14,14
+    NSLog(@"先序遍历结果：%@",[orderArray componentsJoinedByString:@","]);//7,6,3,2,1,4,9,10,12,14,16
     
     //中序遍历，先遍历左子树，再访问根，再遍历右子树
     NSMutableArray * orderArray1 = [NSMutableArray array];
     [BinaryTreeNode inOrderTraverseTree:tree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [orderArray1 addObject:@(treeNode.value)];
     }];
-    NSLog(@"中序遍历结果：%@",[orderArray1 componentsJoinedByString:@","]);//1,2,3,4,6,7,9,10,12,14,14
+    NSLog(@"中序遍历结果：%@",[orderArray1 componentsJoinedByString:@","]);//1,2,3,4,6,7,9,10,12,14,16
     
     //后序遍历，先遍历左子树，再遍历右子树，再访问根
     NSMutableArray * orderArray2 = [NSMutableArray array];
     [BinaryTreeNode postOrderTraverseTree:tree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [orderArray2 addObject:@(treeNode.value)];
     }];
-    NSLog(@"后序遍历结果：%@",[orderArray2 componentsJoinedByString:@","]);//1,2,4,3,6,14,14,12,10,9,7
+    NSLog(@"后序遍历结果：%@",[orderArray2 componentsJoinedByString:@","]);//1,2,4,3,6,16,14,12,10,9,7
     
     //层次遍历 广度优先
     NSMutableArray * orderArray3 = [NSMutableArray array];
@@ -67,31 +67,31 @@
     [BinaryTreeNode preOrderTraverseTree:invertTree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [invertArray addObject:@(treeNode.value)];
     }];
-    NSLog(@"翻转二叉树-先序遍历结果：%@",[invertArray componentsJoinedByString:@","]);//7,9,10,12,14,14,6,3,4,2,1
+    NSLog(@"翻转二叉树-先序遍历结果：%@",[invertArray componentsJoinedByString:@","]);//7,9,10,12,14,16,6,3,4,2,1
 
     //中序遍历，先遍历左子树，再访问根，再遍历右子树
     NSMutableArray * invertArray1 = [NSMutableArray array];
     [BinaryTreeNode inOrderTraverseTree:invertTree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [invertArray1 addObject:@(treeNode.value)];
     }];
-    NSLog(@"翻转二叉树-中序遍历结果：%@",[invertArray1 componentsJoinedByString:@","]);//14,14,12,10,9,7,6,4,3,2,1
+    NSLog(@"翻转二叉树-中序遍历结果：%@",[invertArray1 componentsJoinedByString:@","]);//16,14,12,10,9,7,6,4,3,2,1
 
     //后序遍历，先遍历左子树，再遍历右子树，再访问根
     NSMutableArray * invertArray2 = [NSMutableArray array];
     [BinaryTreeNode postOrderTraverseTree:invertTree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [invertArray2 addObject:@(treeNode.value)];
     }];
-    NSLog(@"翻转二叉树-后序遍历结果：%@",[invertArray2 componentsJoinedByString:@","]);//14,14,12,10,9,4,1,2,3,6,7
+    NSLog(@"翻转二叉树-后序遍历结果：%@",[invertArray2 componentsJoinedByString:@","]);//16,14,12,10,9,4,1,2,3,6,7
 
     //层次遍历 广度优先
     NSMutableArray * invertArray3 = [NSMutableArray array];
     [BinaryTreeNode levelTraverseTree:invertTree handler:^(BinaryTreeNode * _Nonnull treeNode) {
         [invertArray3 addObject:@(treeNode.value)];
     }];
-    NSLog(@"翻转二叉树-层次遍历结果：%@",[invertArray3 componentsJoinedByString:@","]);//7,9,6,10,3,12,4,2,14,1,14
+    NSLog(@"翻转二叉树-层次遍历结果：%@",[invertArray3 componentsJoinedByString:@","]);//7,9,6,10,3,12,4,2,14,1,16
     
     //翻转二叉树（非递归方式）
-    NSArray * arr2 = @[@7,@6,@3,@2,@1,@9,@10,@12,@14,@4,@14];
+    NSArray * arr2 = @[@7,@6,@3,@2,@1,@9,@10,@12,@14,@4,@16];
     BinaryTreeNode * tree2 = [BinaryTreeNode new];
     tree2 = [BinaryTreeNode createTreeWithValues:arr2];
     NSLog(@"二叉排序树：%@",tree2);
